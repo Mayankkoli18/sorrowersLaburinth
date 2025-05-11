@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://gep2cnqqnb26"]
+
+[ext_resource type="Shader" uid="uid://uabayfotyqg4" path="res://hatching.gdshader" id="1_a202f"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_a202f"]
+flip_faces = true
+size = Vector2(2, 2)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a0tk4"]
+render_priority = 0
+shader = ExtResource("1_a202f")
+shader_parameter/depth_treshold = 0.05
+
+[sub_resource type="BoxMesh" id="BoxMesh_a202f"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.263344, 1.38513)
+extra_cull_margin = 16384.0
+mesh = SubResource("QuadMesh_a202f")
+surface_material_override/0 = SubResource("ShaderMaterial_a0tk4")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.393018, 2.09712)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_a202f")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ojy34h07k78f"]
+
+[ext_resource type="PackedScene" uid="uid://p13fid5lsgwo" path="res://bears.fbx" id="1_4jklx"]
+
+[node name="bears" instance=ExtResource("1_4jklx")]
+
+[node name="Armature" parent="." index="0"]
+visible = false
+
+[node name="Armature_001" parent="." index="1"]
+transform = Transform3D(95.5912, 29.3652, 2.98023e-06, 1.49012e-06, -2.38419e-05, 100, 29.3652, -95.5912, -2.38419e-05, 0, 0, 0)
+
+[node name="bow_bear" parent="." index="2"]
+visible = false

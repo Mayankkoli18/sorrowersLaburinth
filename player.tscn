@@ -1,0 +1,735 @@
+[gd_scene load_steps=64 format=3 uid="uid://c4dt8eva8racc"]
+
+[ext_resource type="Script" uid="uid://cjfqy1dbwqntc" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://dlcbl36cmp48g" path="res://camera.gd" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://c1a7lkpjchllq" path="res://torch.gd" id="3_i3pqv"]
+[ext_resource type="AudioStream" uid="uid://dsqsn0nwjcluv" path="res://Steps_tiles-001.ogg" id="4_hqtel"]
+[ext_resource type="FontFile" uid="uid://bgx8uwesm8p88" path="res://Dracutaz-ovR0B.ttf" id="4_n7ghd"]
+[ext_resource type="Texture2D" uid="uid://ba2fw7b6iwdbj" path="res://bluefire.png" id="5_b26j0"]
+[ext_resource type="Texture2D" uid="uid://rb3spvus2tdh" path="res://hand.png" id="5_sweqy"]
+[ext_resource type="Texture2D" uid="uid://bg8bvhcspe5ut" path="res://fire.png" id="6_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://7qx40po202hn" path="res://enhvisIcon.png" id="6_ivps1"]
+[ext_resource type="Texture2D" uid="uid://co1vpsewcacf5" path="res://greyfire (1).png" id="6_n7ghd"]
+[ext_resource type="Texture2D" uid="uid://beqyksmram1ed" path="res://xrayIcon.png" id="7_bwjto"]
+[ext_resource type="Texture2D" uid="uid://dy11b2kaeur0e" path="res://invisIcon.png" id="7_urp6f"]
+[ext_resource type="Texture2D" uid="uid://dap2boykqwvl1" path="res://Screenshot 2025-05-11 105106.png" id="8_urp6f"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_2hs0m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jxqw"]
+atlas = ExtResource("6_2hs0m")
+region = Rect2(0, 0, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dw050"]
+atlas = ExtResource("6_2hs0m")
+region = Rect2(125, 0, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b26j0"]
+atlas = ExtResource("6_2hs0m")
+region = Rect2(250, 0, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7ghd"]
+atlas = ExtResource("6_2hs0m")
+region = Rect2(375, 0, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvl01"]
+atlas = ExtResource("6_2hs0m")
+region = Rect2(0, 166, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivps1"]
+atlas = ExtResource("6_2hs0m")
+region = Rect2(125, 166, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urp6f"]
+atlas = ExtResource("6_2hs0m")
+region = Rect2(250, 166, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
+atlas = ExtResource("6_2hs0m")
+region = Rect2(375, 166, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_606se"]
+atlas = ExtResource("6_2hs0m")
+region = Rect2(0, 332, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1c27"]
+atlas = ExtResource("6_2hs0m")
+region = Rect2(125, 332, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op7ga"]
+atlas = ExtResource("6_2hs0m")
+region = Rect2(250, 332, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q13i1"]
+atlas = ExtResource("6_2hs0m")
+region = Rect2(375, 332, 125, 166)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pylmc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jxqw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw050")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b26j0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7ghd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvl01")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivps1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urp6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwjto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_606se")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1c27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_op7ga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q13i1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nvl01"]
+line_spacing = 3.98
+font = ExtResource("4_n7ghd")
+font_size = 50
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ivps1"]
+font = ExtResource("4_n7ghd")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_bwjto"]
+font = ExtResource("4_n7ghd")
+font_size = 25
+font_color = Color(0.752941, 0.682353, 0.486275, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_606se"]
+font = ExtResource("4_n7ghd")
+font_size = 66
+
+[sub_resource type="LabelSettings" id="LabelSettings_urp6f"]
+font = ExtResource("4_n7ghd")
+font_size = 50
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pylmc"]
+atlas = ExtResource("5_b26j0")
+region = Rect2(0, 0, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbfsw"]
+atlas = ExtResource("5_b26j0")
+region = Rect2(125, 0, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tmop"]
+atlas = ExtResource("5_b26j0")
+region = Rect2(250, 0, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ahtn"]
+atlas = ExtResource("5_b26j0")
+region = Rect2(375, 0, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lmhl"]
+atlas = ExtResource("5_b26j0")
+region = Rect2(0, 166, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dx0e4"]
+atlas = ExtResource("5_b26j0")
+region = Rect2(125, 166, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jm5j8"]
+atlas = ExtResource("5_b26j0")
+region = Rect2(250, 166, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hik5"]
+atlas = ExtResource("5_b26j0")
+region = Rect2(375, 166, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtqh7"]
+atlas = ExtResource("5_b26j0")
+region = Rect2(0, 332, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wuci"]
+atlas = ExtResource("5_b26j0")
+region = Rect2(125, 332, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iruf7"]
+atlas = ExtResource("5_b26j0")
+region = Rect2(250, 332, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5n4i"]
+atlas = ExtResource("5_b26j0")
+region = Rect2(375, 332, 125, 166)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_634y6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pylmc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbfsw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tmop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ahtn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lmhl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dx0e4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jm5j8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hik5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qtqh7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wuci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iruf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5n4i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efrwb"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(0, 0, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hiqhm"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(125, 0, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkwlq"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(250, 0, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl5qd"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(375, 0, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ek41f"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(0, 166, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khis8"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(125, 166, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b88wv"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(250, 166, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgbbb"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(375, 166, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_331ug"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(0, 332, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny14h"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(125, 332, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibah8"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(250, 332, 125, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3iwfv"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(375, 332, 125, 166)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qwsg1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efrwb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hiqhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkwlq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl5qd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ek41f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khis8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b88wv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgbbb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_331ug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ny14h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibah8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3iwfv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u1c27"]
+font = ExtResource("4_n7ghd")
+font_size = 80
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_op7ga"]
+font = ExtResource("4_n7ghd")
+font_size = 81
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_onrkg"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i3pqv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hqtel"]
+
+[node name="Player" type="CharacterBody3D"]
+collision_layer = 14
+script = ExtResource("1_4flbx")
+
+[node name="Control" type="Control" parent="."]
+process_mode = 3
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1168.0
+offset_bottom = 653.0
+
+[node name="XrayIcon" type="Sprite2D" parent="Control"]
+process_mode = 3
+position = Vector2(314, 577)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_bwjto")
+
+[node name="EnhvisIcon" type="Sprite2D" parent="Control"]
+process_mode = 3
+position = Vector2(191, 577)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_ivps1")
+
+[node name="InvisIcon" type="Sprite2D" parent="Control"]
+process_mode = 3
+position = Vector2(70, 582)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_urp6f")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+process_mode = 3
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("ImageTexture_2hs0m")
+
+[node name="Hand" type="Sprite2D" parent="Control"]
+process_mode = 3
+position = Vector2(1027, 543)
+rotation = 0.153097
+scale = Vector2(-0.900251, 0.666672)
+texture = ExtResource("5_sweqy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control" groups=["player"]]
+process_mode = 3
+position = Vector2(896, 225)
+scale = Vector2(1.73102, 1.73102)
+sprite_frames = SubResource("SpriteFrames_pylmc")
+autoplay = "default"
+frame = 10
+frame_progress = 0.369746
+
+[node name="Label" type="Label" parent="Control"]
+process_mode = 3
+layout_mode = 0
+offset_left = 30.0
+offset_top = 37.0
+offset_right = 352.0
+offset_bottom = 98.0
+text = "DOLLS COLLECTED :"
+label_settings = SubResource("LabelSettings_nvl01")
+
+[node name="score" type="Label" parent="Control"]
+process_mode = 3
+layout_mode = 0
+offset_left = 349.0
+offset_top = 39.0
+offset_right = 550.0
+offset_bottom = 100.0
+text = "xx"
+label_settings = SubResource("LabelSettings_ivps1")
+
+[node name="MiniMap" type="TextureRect" parent="Control"]
+process_mode = 3
+visible = false
+layout_mode = 0
+offset_left = 61.0
+offset_top = 58.0
+offset_right = 628.0
+offset_bottom = 605.0
+texture = ExtResource("8_urp6f")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+process_mode = 3
+layer = 3
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Control/CanvasLayer"]
+process_mode = 3
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.584314)
+
+[node name="nightVis" type="Button" parent="Control/CanvasLayer"]
+process_mode = 3
+offset_left = 25.0
+offset_top = 280.0
+offset_right = 202.0
+offset_bottom = 443.0
+icon = ExtResource("6_ivps1")
+
+[node name="xray" type="Button" parent="Control/CanvasLayer"]
+process_mode = 3
+offset_left = 31.0
+offset_top = 466.0
+offset_right = 198.0
+offset_bottom = 629.0
+icon = ExtResource("7_bwjto")
+
+[node name="invis" type="Button" parent="Control/CanvasLayer"]
+process_mode = 3
+offset_left = 24.0
+offset_top = 99.0
+offset_right = 191.0
+offset_bottom = 263.0
+icon = ExtResource("7_urp6f")
+
+[node name="ColorRect2" type="ColorRect" parent="Control/CanvasLayer"]
+process_mode = 3
+offset_left = 215.0
+offset_top = 111.0
+offset_right = 836.0
+offset_bottom = 248.0
+color = Color(0.321569, 0.388235, 0.262745, 1)
+
+[node name="Label" type="Label" parent="Control/CanvasLayer/ColorRect2"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 9.0
+offset_right = 609.0
+offset_bottom = 130.0
+text = "NULL PRESENCE
+Fade into the folds of shadow  let no eye behold your form.
+Gives 10 sec of invisibility.(if not already in chase)
+Press 1 to use"
+label_settings = SubResource("LabelSettings_bwjto")
+
+[node name="ColorRect3" type="ColorRect" parent="Control/CanvasLayer"]
+process_mode = 3
+offset_left = 215.0
+offset_top = 294.0
+offset_right = 836.0
+offset_bottom = 431.0
+color = Color(0.321569, 0.388235, 0.262745, 1)
+
+[node name="Label" type="Label" parent="Control/CanvasLayer/ColorRect3"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 9.0
+offset_right = 609.0
+offset_bottom = 130.0
+text = "Omen sight
+Look beyond mortal means let no detail escape your gaze..
+Gives 10 sec of enhanced vision
+Press 2 to use"
+label_settings = SubResource("LabelSettings_bwjto")
+
+[node name="ColorRect4" type="ColorRect" parent="Control/CanvasLayer"]
+process_mode = 3
+offset_left = 215.0
+offset_top = 477.0
+offset_right = 836.0
+offset_bottom = 614.0
+color = Color(0.321569, 0.388235, 0.262745, 1)
+
+[node name="Label" type="Label" parent="Control/CanvasLayer/ColorRect4"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 9.0
+offset_right = 609.0
+offset_bottom = 130.0
+text = "bone sight
+Pierce the veil of  stone reveal what lies beneath.
+Gives 3 sec of xray vision
+Press 3 to use"
+label_settings = SubResource("LabelSettings_bwjto")
+
+[node name="osui4" type="Label" parent="Control/CanvasLayer"]
+process_mode = 3
+offset_left = 152.0
+offset_top = 193.0
+offset_right = 198.0
+offset_bottom = 263.0
+text = "3"
+label_settings = SubResource("LabelSettings_606se")
+
+[node name="osui5" type="Label" parent="Control/CanvasLayer"]
+process_mode = 3
+offset_left = 172.0
+offset_top = 376.0
+offset_right = 218.0
+offset_bottom = 446.0
+text = "3"
+label_settings = SubResource("LabelSettings_606se")
+
+[node name="osui6" type="Label" parent="Control/CanvasLayer"]
+process_mode = 3
+offset_left = 168.0
+offset_top = 556.0
+offset_right = 214.0
+offset_bottom = 626.0
+text = "3"
+label_settings = SubResource("LabelSettings_606se")
+
+[node name="Label2" type="Label" parent="Control"]
+process_mode = 3
+layout_mode = 0
+offset_left = 1069.0
+offset_top = 39.0
+offset_right = 1341.0
+offset_bottom = 99.0
+text = "XX"
+label_settings = SubResource("LabelSettings_urp6f")
+
+[node name="Label3" type="Label" parent="Control"]
+process_mode = 3
+layout_mode = 0
+offset_left = 781.0
+offset_top = 37.0
+offset_right = 1043.0
+offset_bottom = 98.0
+text = "Skill Points :"
+label_settings = SubResource("LabelSettings_nvl01")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Control"]
+process_mode = 3
+visible = false
+position = Vector2(896, 225)
+scale = Vector2(1.71105, 1.71105)
+sprite_frames = SubResource("SpriteFrames_634y6")
+autoplay = "default"
+frame = 11
+frame_progress = 1.0
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Control"]
+process_mode = 3
+visible = false
+position = Vector2(893, 230)
+scale = Vector2(1.35542, 1.35542)
+sprite_frames = SubResource("SpriteFrames_qwsg1")
+autoplay = "default"
+frame = 2
+frame_progress = 0.485836
+
+[node name="osui1" type="Label" parent="Control"]
+process_mode = 3
+layout_mode = 0
+offset_left = 92.0
+offset_top = 585.0
+offset_right = 138.0
+offset_bottom = 655.0
+text = "3"
+label_settings = SubResource("LabelSettings_606se")
+
+[node name="osui4" type="Label" parent="Control"]
+process_mode = 3
+layout_mode = 0
+offset_left = 24.0
+offset_top = 530.0
+offset_right = 70.0
+offset_bottom = 600.0
+scale = Vector2(0.50726, 0.50726)
+text = "1"
+label_settings = SubResource("LabelSettings_606se")
+
+[node name="osui5" type="Label" parent="Control"]
+process_mode = 3
+layout_mode = 0
+offset_left = 149.0
+offset_top = 530.0
+offset_right = 195.0
+offset_bottom = 673.0
+scale = Vector2(0.50726, 0.50726)
+text = "2
+"
+label_settings = SubResource("LabelSettings_606se")
+
+[node name="osui6" type="Label" parent="Control"]
+process_mode = 3
+layout_mode = 0
+offset_left = 272.0
+offset_top = 530.0
+offset_right = 318.0
+offset_bottom = 600.0
+scale = Vector2(0.50726, 0.50726)
+text = "3"
+label_settings = SubResource("LabelSettings_606se")
+
+[node name="osui2" type="Label" parent="Control"]
+process_mode = 3
+layout_mode = 0
+offset_left = 209.0
+offset_top = 585.0
+offset_right = 255.0
+offset_bottom = 655.0
+text = "3"
+label_settings = SubResource("LabelSettings_606se")
+
+[node name="osui3" type="Label" parent="Control"]
+process_mode = 3
+layout_mode = 0
+offset_left = 341.0
+offset_top = 585.0
+offset_right = 387.0
+offset_bottom = 655.0
+text = "3"
+label_settings = SubResource("LabelSettings_606se")
+
+[node name="Pause menu" type="CanvasLayer" parent="Control"]
+process_mode = 3
+visible = false
+
+[node name="Label" type="Label" parent="Control/Pause menu"]
+process_mode = 3
+offset_left = 439.0
+offset_top = 326.0
+offset_right = 736.0
+offset_bottom = 409.0
+text = "Main menu"
+label_settings = SubResource("LabelSettings_u1c27")
+
+[node name="Label2" type="Label" parent="Control/Pause menu"]
+process_mode = 3
+visible = false
+offset_left = 483.0
+offset_top = 215.0
+offset_right = 683.0
+offset_bottom = 300.0
+text = "Resume"
+label_settings = SubResource("LabelSettings_op7ga")
+
+[node name="mainmenuButton" type="Button" parent="Control/Pause menu"]
+process_mode = 3
+offset_left = 439.0
+offset_top = 326.0
+offset_right = 751.0
+offset_bottom = 409.0
+flat = true
+
+[node name="ResumeBtn" type="Button" parent="Control/Pause menu"]
+process_mode = 3
+visible = false
+offset_left = 483.0
+offset_top = 215.0
+offset_right = 704.0
+offset_bottom = 297.0
+flat = true
+
+[node name="Label4" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 684.0
+offset_top = 572.0
+offset_right = 889.0
+offset_bottom = 647.0
+text = "Press G to open skill menu
+Press M to open Map
+Press L to Lock mouse"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_onrkg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_i3pqv")
+
+[node name="head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.592325, 0)
+script = ExtResource("2_onrkg")
+
+[node name="Camera3D" type="Camera3D" parent="head"]
+fov = 37.8493
+
+[node name="Torch" type="OmniLight3D" parent="head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0424642, -0.268047, 0.000324726)
+light_color = Color(1, 0.498039, 0, 1)
+light_energy = 0.5
+light_indirect_energy = 1.878
+light_specular = 0.0
+omni_range = 4.01878
+omni_attenuation = 1.135
+script = ExtResource("3_i3pqv")
+
+[node name="nuhuh" type="Area3D" parent="." groups=["player"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="nuhuh"]
+shape = SubResource("CapsuleShape3D_hqtel")
+
+[node name="AudioListener3D" type="AudioListener3D" parent="."]
+current = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_hqtel")
+volume_db = -21.55
+pitch_scale = 0.44
+
+[connection signal="pressed" from="Control/CanvasLayer/nightVis" to="." method="_on_night_vis_pressed"]
+[connection signal="pressed" from="Control/CanvasLayer/xray" to="." method="_on_xray_pressed"]
+[connection signal="pressed" from="Control/CanvasLayer/invis" to="." method="_on_invis_pressed"]
+[connection signal="pressed" from="Control/Pause menu/mainmenuButton" to="." method="_on_mainmenu_button_pressed"]
+[connection signal="pressed" from="Control/Pause menu/ResumeBtn" to="." method="_on_resume_btn_pressed"]
+[connection signal="area_entered" from="nuhuh" to="." method="_on_nuhuh_area_entered"]

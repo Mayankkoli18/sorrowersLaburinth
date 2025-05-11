@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv63etdhy4wi0"]
+
+[ext_resource type="FontFile" uid="uid://bgx8uwesm8p88" path="res://Dracutaz-ovR0B.ttf" id="1_8wihj"]
+[ext_resource type="Script" uid="uid://c7eccpg8t5kat" path="res://tut.gd" id="1_wwf55"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wwf55"]
+font = ExtResource("1_8wihj")
+font_size = 61
+
+[node name="tut" type="Node2D"]
+script = ExtResource("1_wwf55")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1172.0
+offset_bottom = 662.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 502.0
+offset_top = 22.0
+offset_right = 699.0
+offset_bottom = 153.0
+text = "Tutorial
+"
+label_settings = SubResource("LabelSettings_wwf55")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 502.0
+offset_top = 562.0
+offset_right = 699.0
+offset_bottom = 693.0
+text = "Press  space to continue"
+label_settings = SubResource("LabelSettings_wwf55")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 153.0
+offset_right = 1906.0
+offset_bottom = 887.0
+scale = Vector2(0.556544, 0.556544)
+text = "collect 8 dolls around the maze and return to the central chamber.
+
+each doll collected gives you one skill point.  press G to open the skill menu.
+you can buy one skill for one skill point
+
+you can unlock mini map after collecting 4 dolls. Press M to access.
+
+follow light cues and avoid the sorrower's
+
+once all dolls are placed in central chamber rush for the exit
+ "
+label_settings = SubResource("LabelSettings_wwf55")

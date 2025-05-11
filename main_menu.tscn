@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=3 uid="uid://dkj58y5xpbcdm"]
+
+[ext_resource type="Texture2D" uid="uid://bceo64avrmth4" path="res://mainemnpng.png" id="1_fu7sn"]
+[ext_resource type="Script" uid="uid://cnycu3lhlk0lb" path="res://mainmenu.gd" id="1_jix8l"]
+[ext_resource type="Texture2D" uid="uid://dnigd51mnb6ss" path="res://circle.png" id="2_jix8l"]
+[ext_resource type="FontFile" uid="uid://bgx8uwesm8p88" path="res://Dracutaz-ovR0B.ttf" id="3_glbon"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nlkkf"]
+font = ExtResource("3_glbon")
+font_size = 76
+
+[sub_resource type="LabelSettings" id="LabelSettings_qe12f"]
+font = ExtResource("3_glbon")
+font_size = 81
+font_color = Color(1, 0, 0, 1)
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jix8l")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 646.0
+texture = ExtResource("1_fu7sn")
+expand_mode = 2
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(748, 121)
+scale = Vector2(0.0207767, 0.0299643)
+color = Color(1, 0, 0, 1)
+energy = 1.48
+texture = ExtResource("2_jix8l")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 159.0
+offset_right = 371.0
+offset_bottom = 239.0
+text = "Sorrower's"
+label_settings = SubResource("LabelSettings_nlkkf")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 159.0
+offset_right = 727.0
+offset_bottom = 244.0
+text = "Labyrinth"
+label_settings = SubResource("LabelSettings_qe12f")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 349.0
+offset_right = 391.0
+offset_bottom = 405.0
+scale = Vector2(1.75817, 1.63492)
+flat = true
+
+[node name="Label3" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 49.4833
+offset_top = 7.3398
+offset_right = 382.483
+offset_bottom = 87.3398
+scale = Vector2(0.608651, 0.608651)
+text = "pl"
+label_settings = SubResource("LabelSettings_nlkkf")
+
+[node name="Label4" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 89.2974
+offset_top = 7.33987
+offset_right = 422.297
+offset_bottom = 92.3399
+scale = Vector2(0.588636, 0.634531)
+text = "ay"
+label_settings = SubResource("LabelSettings_qe12f")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

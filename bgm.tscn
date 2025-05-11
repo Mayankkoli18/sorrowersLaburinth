@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr2fbdvjovgnx"]
+
+[ext_resource type="AudioStream" uid="uid://b7dlqqqfv04jj" path="res://horror-background-musicno-copyrightscary-dark-mysterious-musichorror-trailer-musicroyalty-free.wav" id="1_l7bcd"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_l7bcd")
+volume_db = -14.053
+autoplay = true

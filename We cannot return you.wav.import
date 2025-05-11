@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://hi6osbwu06sl"
+path="res://.godot/imported/We cannot return you.wav-c06039cdba30d4e5070f14b2b60b7024.sample"
+
+[deps]
+
+source_file="res://We cannot return you.wav"
+dest_files=["res://.godot/imported/We cannot return you.wav-c06039cdba30d4e5070f14b2b60b7024.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

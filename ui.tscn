@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://kv622iywe8es"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_xb563"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xb563"]
+bg_color = Color(5.77569e-07, 0.646307, 0.910262, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xb563"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_fyqef"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="sprintSlider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 426.0
+offset_right = 908.0
+offset_bottom = 542.0
+theme_override_icons/grabber = SubResource("ImageTexture_xb563")
+theme_override_styles/slider = SubResource("StyleBoxFlat_xb563")
+max_value = 1.0
+step = 0.0
+
+[node name="torchUI" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="torchSlider" type="VSlider" parent="torchUI"]
+material = SubResource("CanvasItemMaterial_xb563")
+layout_mode = 0
+offset_left = 21.0
+offset_top = 82.0
+offset_right = 79.0
+offset_bottom = 448.0
+theme_override_icons/grabber = SubResource("ImageTexture_fyqef")
+max_value = 1.0
+step = 0.0
+value = 1.0

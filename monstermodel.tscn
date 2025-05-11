@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://5jw50gw05xqe"]
+
+[ext_resource type="PackedScene" uid="uid://cnakf57c7k2yt" path="res://The_Haunting_Specter_0507233613_texture.blend" id="1_6l0jv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6l0jv"]
+cull_mode = 1
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+disable_ambient_light = true
+disable_fog = true
+albedo_color = Color(0, 0, 0, 1)
+disable_receive_shadows = true
+grow = true
+grow_amount = 0.05
+
+[node name="The_Haunting_Specter_0507233613_texture" instance=ExtResource("1_6l0jv")]
+
+[node name="Mesh_0" parent="." index="0"]
+material_overlay = SubResource("StandardMaterial3D_6l0jv")

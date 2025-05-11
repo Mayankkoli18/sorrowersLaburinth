@@ -1,0 +1,350 @@
+[gd_scene load_steps=8 format=3 uid="uid://dcpyprkpx6obv"]
+
+[ext_resource type="Script" uid="uid://bq8uns1q03im0" path="res://start_cutscene.gd" id="1_58vgw"]
+[ext_resource type="FontFile" uid="uid://bgx8uwesm8p88" path="res://Dracutaz-ovR0B.ttf" id="1_e8f5h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_58vgw"]
+font = ExtResource("1_e8f5h")
+font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_c7bbc"]
+font = ExtResource("1_e8f5h")
+font_size = 100
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_1pvkr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label3:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label4:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label3:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["This is a connection scout.
+is anyone there"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label4:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Hello? Hello?? is this eli.
+can you hear me?????"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label3:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Label4:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Label5:text")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["press space to skip"]
+}
+
+[sub_resource type="Animation" id="Animation_23xt7"]
+resource_name = "new_animation"
+length = 100.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label3:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.96667, 7.84968, 8.02683, 10, 21.505, 21.6, 22.5937, 25.4333, 25.5165, 28.9873, 35.7124, 35.7562, 38.7667, 50.1667, 50.2032, 54.2432, 54.2921, 56.2065, 67.7667, 67.8251),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.96667, 21.5927, 50.2032, 54.2921, 67.8251, 67.9298),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, true, false, true, false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label4:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.43861, 6, 10.9599, 11.0116, 13.0356, 18.5461, 18.59, 19.6203, 21.5743, 50.2032, 52.2199, 54.2066, 54.2432, 67.7667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label3:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 5.99551, 8.04093, 21.6, 25.4406, 25.5019, 35.7124, 35.7562, 54.2921),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["This is a connection scout.
+is anyone there", "This is a connection scout.
+is anyone there", "mori?? what?? whe-Ho-How 
+are you still alive", "but your bod- Okay okay. yeah
+about your gig let me scan", "but your bod- Okay okay. yeah
+about your gig let me scan", "you're in sorrower's labyrinth.
+You'll encounter the spirit of
+a mother. this place is a prison
+created just by her as a guilt
+for not being able to save them.
+", "you're in sorrower's labyrinth.
+You'll encounter the spirit of
+a mother. this place is a prison
+created just by her as a guilt
+for not being able to save them.
+", "This palce contains doll shaped
+spirit objects used by her
+to entrap her guilt and sorrow.
+You're job is to find them out.
+i can sense 8 such objects. bring
+them all to central chamber 
+which is the core of sorrow
+", "one more thing mori. Once you
+reach the core after getting 
+all cursed objects. she will
+try her best to take you down
+with her. so look or an exit."]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label4:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3.42694, 11.0117, 18.59, 21.5562, 21.6219, 50.2032),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Hello? Hello?? is this eli.
+can you hear me?????", "What do you mean?
+I was off for a gig. i entered
+soul realm through oracle
+but lost connection to oracle", "Just guide me through this
+GIG so i can return to my 
+body", "Just guide me through this
+GIG so i can return to my 
+body", "", "Alright so go in collect 
+8 dolls and bring them to core?
+sounds easy enough."]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 67.9298),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label3:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 67.9298),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Label4:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 67.9298),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Label5:text")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 68.4355, 68.8655),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["press space to skip", "press space to skip", "press space to continue"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nfw16"]
+_data = {
+&"RESET": SubResource("Animation_1pvkr"),
+&"new_animation": SubResource("Animation_23xt7")
+}
+
+[node name="Start Cutscene" type="Node2D"]
+script = ExtResource("1_58vgw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1165.0
+offset_bottom = 662.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 75.0
+offset_top = 82.0
+offset_right = 197.0
+offset_bottom = 186.0
+text = "eli:"
+label_settings = SubResource("LabelSettings_58vgw")
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 295.0
+offset_top = 14.0
+offset_right = 417.0
+offset_bottom = 118.0
+scale = Vector2(0.376387, 0.364767)
+text = "press space to skip"
+label_settings = SubResource("LabelSettings_58vgw")
+
+[node name="Label3" type="Label" parent="."]
+visible = false
+offset_left = 220.0
+offset_top = 89.0
+offset_right = 1466.0
+offset_bottom = 315.0
+scale = Vector2(0.741766, 0.741766)
+text = "This is a connection scout.
+is anyone there"
+label_settings = SubResource("LabelSettings_c7bbc")
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 75.0
+offset_top = 329.0
+offset_right = 252.0
+offset_bottom = 433.0
+text = "MORI:"
+label_settings = SubResource("LabelSettings_c7bbc")
+
+[node name="Label4" type="Label" parent="."]
+visible = false
+offset_left = 290.0
+offset_top = 336.0
+offset_right = 1416.0
+offset_bottom = 613.0
+scale = Vector2(0.729701, 0.729701)
+text = "Hello? Hello?? is this eli.
+can you hear me?????"
+label_settings = SubResource("LabelSettings_58vgw")
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_nfw16")
+}
+autoplay = "new_animation"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
